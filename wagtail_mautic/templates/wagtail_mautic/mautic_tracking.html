@@ -1,17 +1,23 @@
-<script>
-  (function (w, d, t, u, n, a, m) {
-    w["MauticTrackingObject"] = n;
-    (w[n] =
-      w[n] ||
-      function () {
-        (w[n].q = w[n].q || []).push(arguments);
-      }),
-      (a = d.createElement(t)),
-      (m = d.getElementsByTagName(t)[0]);
-    a.async = 1;
-    a.src = u;
-    m.parentNode.insertBefore(a, m);
-  })(window, document, "script", "{{ url }}", "mt");
+{% load wagtailsettings_tags %}
+{% get_settings use_default_site=True %}
 
-  mt("send", "pageview");
-</script>
+{% if settings.wagtail_mautic.MauticSettings.mautic_url %}
+  <script>
+    (function (w, d, t, u, n, a, m) {
+      w["MauticTrackingObject"] = n;
+      (w[n] =
+        w[n] ||
+        function () {
+          (w[n].q = w[n].q || []).push(arguments);
+        }),
+        (a = d.createElement(t)),
+        (m = d.getElementsByTagName(t)[0]);
+      a.async = 1;
+      a.src = u;
+      m.parentNode.insertBefore(a, m);
+    })(window, document, "script", "{{ settings.wagtail_mautic.MauticSettings.mautic_url }}", "mt");
+
+    mt("send", "pageview");
+  </script>
+{% endif %}
+

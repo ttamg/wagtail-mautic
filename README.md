@@ -13,9 +13,22 @@ Now add the application `wagtail_mautic` to your Django applications. In your _b
 ```python
     INSTALLED_APPS = [
         ...
+        "wagtail.contrib.settings",
         "wagtail_mautic",
         ...
         ]
+```
+
+Add the site settings to your context processors:
+
+```python
+    'OPTIONS': {
+        'context_processors': [
+            ...
+
+            'wagtail.contrib.settings.context_processors.settings',
+        ]
+    }
 ```
 
 Migrate your models:
@@ -24,7 +37,7 @@ Migrate your models:
 
 ## Setup
 
-Wnen you spin up your Wagtail app, you should now see a new Mautic settings in the Wagtail admin screen
+When you spin up your Wagtail app, you should now see a new Mautic settings in the Wagtail admin screen
 
 Add in the URL for your Mautic instance (including the https://) to the **Mautic Url** field.
 
