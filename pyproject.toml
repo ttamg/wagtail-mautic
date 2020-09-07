@@ -1,0 +1,19 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "wagtail_mautic"
+author = "Matt Gosden"
+author-email = "mdgosden@gmail.com"
+home-page = "https://github.com/ttamg/wagtail-mautic"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3 :: Only"
+]
+requires = ["wagtail>=2.8"]
+requires-python=">=3.6"
+description-file = "README.md"
+keywords = "wagtail, mautic"
+
