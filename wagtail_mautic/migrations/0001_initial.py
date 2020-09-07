@@ -9,19 +9,41 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('wagtailcore', '0052_pagelogentry'),
+        ("wagtailcore",),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='MauticSettings',
+            name="MauticSettings",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('mautic_url', models.URLField(blank=True, help_text='Your Mautic site URL including the https:// prefix (easiest option)', null=True)),
-                ('site', models.OneToOneField(editable=False, on_delete=django.db.models.deletion.CASCADE, to='wagtailcore.site')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "mautic_url",
+                    models.URLField(
+                        blank=True,
+                        help_text="Your Mautic site URL including the https:// prefix (easiest option)",
+                        null=True,
+                    ),
+                ),
+                (
+                    "site",
+                    models.OneToOneField(
+                        editable=False,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="wagtailcore.site",
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
     ]
