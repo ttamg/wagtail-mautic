@@ -8,9 +8,7 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-        ("wagtailcore",),
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
