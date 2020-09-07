@@ -12,7 +12,7 @@ classifiers = [
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3 :: Only"
 ]
-requires = ["wagtail>=2.8"]
+requires = ["wagtail>=2.8", "django>=2.10"]
 requires-python=">=3.6"
 description-file = "README.md"
 keywords = "wagtail, mautic"

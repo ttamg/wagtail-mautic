@@ -1,5 +1,5 @@
 from django import template
-from models import MauticSettings
+from wagtail_mautic.models import MauticSettings
 
 register = template.Library()
 
@@ -8,5 +8,5 @@ register = template.Library()
 def mautic_tracking():
     if MauticSettings.mautic_url:
         return {"tracking": True, "url": MauticSettings.mautic_url}
-    else 
-        return{"tracking": False}
+    else:
+        return {"tracking": False}
