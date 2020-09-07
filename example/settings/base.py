@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # App specific
     "home",
-    # "search",
     "wagtail.contrib.settings",
     "wagtail_mautic",
 ]
