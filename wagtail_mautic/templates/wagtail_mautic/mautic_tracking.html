@@ -15,7 +15,7 @@
       a.async = 1;
       a.src = u;
       m.parentNode.insertBefore(a, m);
-    })(window, document, "script", "{{ settings.wagtail_mautic.MauticSettings.mautic_url }}", "mt");
+    })(window, document, "script", "{{ settings.wagtail_mautic.MauticSettings.mautic_url }}/mtc.js", "mt");
 
     mt("send", "pageview");
   </script>

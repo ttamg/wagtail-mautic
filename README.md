@@ -52,3 +52,7 @@ The template tag `{% mautic_tracker %}` can be added to any page and this will a
 To install site-wide add this to your _base.html_ template or similar.
 
 Recommended placement is to add the tracking code as the last item in the `<body> ... </body>` tag section.
+
+## Add Mautic prefetch tags
+
+For faster loading of pages, the Mautic site can be set up with a pre-fetch `<link>` in the header.  To add this to your site, add the `{% mautic_prefetch %}` tag within the `<head></head>` of your templates.

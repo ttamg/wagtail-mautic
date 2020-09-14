@@ -6,7 +6,7 @@ from wagtail.contrib.settings.models import BaseSetting, register_setting
 @register_setting
 class MauticSettings(BaseSetting):
     mautic_url = models.URLField(
-        help_text="Your Mautic site URL including the https:// prefix (easiest option)",
+        help_text="Your Mautic site URL including the https:// prefix - do NOT add a trailing slash",
         null=True,
         blank=True,
     )

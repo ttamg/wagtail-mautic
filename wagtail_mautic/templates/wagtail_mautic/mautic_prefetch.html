@@ -1,0 +1,7 @@
+{% load wagtailsettings_tags %}
+{% get_settings use_default_site=True %}
+
+{% if settings.wagtail_mautic.MauticSettings.mautic_url %}
+  <link href="{{ settings.wagtail_mautic.MauticSettings.mautic_url }}" rel="dns-prefetch" crossorigin="crossorigin">
+{% endif %}
+
